@@ -1,0 +1,23 @@
+# Credentials — never commit
+.env
+
+# Virtual environment
+.venv/
+
+# Generated output
+reports/
+logs/
+
+# Data (contains personal job tracking state)
+data/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# macOS
+.DS_Store
+
+# Scripts with hardcoded paths (use setup/launchd/ templates instead)
+scripts/

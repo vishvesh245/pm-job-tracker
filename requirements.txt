@@ -1,0 +1,9 @@
+python-jobspy
+pandas
+linkedin-api
+python-dotenv
+selenium
+webdriver-manager
+openpyxl
+anthropic
+pdfplumber

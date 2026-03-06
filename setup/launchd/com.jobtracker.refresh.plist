@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- Daily 8 AM scrape. Also runs on login/wake if not already done today.
+     1. Copy maybe_refresh.sh to ~/job-tracker/scripts/ and chmod +x it.
+     2. Replace /Users/YOUR_USERNAME with your actual home directory path.
+     3. Copy to ~/Library/LaunchAgents/
+     4. Run: launchctl load ~/Library/LaunchAgents/com.jobtracker.refresh.plist -->
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.jobtracker.refresh</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>/Users/YOUR_USERNAME/job-tracker/scripts/maybe_refresh.sh</string>
+    </array>
+
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Hour</key>
+        <integer>8</integer>
+        <key>Minute</key>
+        <integer>0</integer>
+    </dict>
+
+    <key>RunAtLoad</key>
+    <true/>
+
+    <key>StandardOutPath</key>
+    <string>/Users/YOUR_USERNAME/job-tracker/logs/cron.log</string>
+
+    <key>StandardErrorPath</key>
+    <string>/Users/YOUR_USERNAME/job-tracker/logs/cron.log</string>
+</dict>
+</plist>
