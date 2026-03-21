@@ -25,7 +25,33 @@ A personal dashboard that scrapes fresh PM job listings from LinkedIn every morn
 - pdfplumber for CV parsing
 - Vanilla JS + HTML (no frontend build step)
 
-## Setup
+## Quick Start (Docker — recommended)
+
+The easiest way to run this. No Python setup, no dependency headaches.
+
+**Requirements:** [Docker Desktop](https://www.docker.com/products/docker-desktop)
+
+```bash
+git clone https://github.com/vishvesh245/pm-job-tracker.git
+cd pm-job-tracker
+./setup.sh
+```
+
+The setup script walks you through everything step by step — LinkedIn cookie, Anthropic API key, and resume — then starts the dashboard automatically.
+
+Open **http://localhost:5050** once it's running.
+
+```bash
+# Stop the tracker
+docker stop pm-job-tracker
+
+# Start it again later
+docker start pm-job-tracker
+```
+
+---
+
+## Manual Setup (without Docker)
 
 ### 1. Clone and install dependencies
 
