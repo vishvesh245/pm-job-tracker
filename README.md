@@ -2,8 +2,6 @@
 
 A personal dashboard that scrapes fresh PM job listings from LinkedIn every morning, scores them against your CV using Claude AI, and lets you find and reach out to the right contacts — all from a local web UI.
 
-![Dashboard](https://img.shields.io/badge/Python-3.10%2B-blue) ![License](https://img.shields.io/badge/license-MIT-green)
-
 ## Features
 
 - **Daily scrape** — pulls PM job listings from LinkedIn (configurable search terms + locations)
